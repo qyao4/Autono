@@ -95,7 +95,7 @@ button {
     border-radius: 4px;
     border: 0;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-    color: #ffffff !important;
+    color: #ffffff;
     cursor: pointer;
     display: inline-block;
     font-weight: 300;
@@ -108,23 +108,27 @@ button {
 
 button:hover,
 button:focus {
-    box-shadow: inset 0 0 0 1px #e44c65;
-    color: #e44c65 !important;
+    box-shadow: inset 0 0 0 1px #e76278;
+    /* color: #e44c65 !important; */
 }
 button:focus {
     background-color: rgba(228, 76, 101, 0.15);
 }
 button.primary {
-    background-color: #e44c65;
+    /* background-color: #e44c65; */
+    background-color: #b30020;
     box-shadow: none;
-    color: #ffffff !important;
+    /* color: #ffffff !important; */
 }
-button.primary:hover {
+
+button.primary:hover,
+button.primary:focus {
     background-color: #e76278;
 }
-button.primary:focus {
+
+/* button.primary:focus {
     background-color: #e13652;
-}
+} */
 
 /* Header */
 #header {
@@ -210,14 +214,22 @@ button.primary:focus {
 } */
 
 #footer ul.icons li .icon > .label {
-    display: none;
+    /* display: none; */
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* for older browsers */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
 }
 
 #footer ul.icons li .icon:before {
     content: "";
     display: inline-block;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
@@ -225,12 +237,19 @@ button.primary:focus {
 }
 
 #footer ul.icons li .icon.twitter:hover:before,
+#footer ul.icons li .icon.twitter:focus:before,
 #footer ul.icons li .icon.facebook:hover:before,
+#footer ul.icons li .icon.facebook:focus:before,
 #footer ul.icons li .icon.linkedin:hover:before,
+#footer ul.icons li .icon.linkedin:focus:before,
 #footer ul.icons li .icon.instagram:hover:before,
+#footer ul.icons li .icon.instagram:focus:before,
 #footer ul.icons li .icon.github:hover:before,
-#footer ul.icons li .icon.mail:hover:before{
+#footer ul.icons li .icon.github:focus:before,
+#footer ul.icons li .icon.mail:hover:before,
+#footer ul.icons li .icon.mail:focus:before{
     border-bottom: 0.1px solid rgba(228,76,101,1); 
+    height: 15px;
 }
 
 #footer ul.icons li .icon.twitter:before {
@@ -292,7 +311,7 @@ button.primary:focus {
 }
 
 #welcome{
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -351,8 +370,9 @@ button.primary:focus {
     margin-top: 1em;
 }
 
-#introduction div.image section h4{
+#introduction div.image section h3{
     font-weight: bolder;
+    font-size: 1em;
 }
 
 #numbers_grid_container{
@@ -454,6 +474,10 @@ button.primary:focus {
     font-weight: bold;
 }
 
+#products aside ul li header h2{
+    font-size: 1.2em !important;
+}
+
 #products aside ul li a{
     font-style: italic;
     font-size: 0.8em;
@@ -481,8 +505,9 @@ button.primary:focus {
     border-radius: 2%;
 }
 
-#products section h5{
+#products section h3{
     text-align: center;
+    font-size: 1.2em;
 }
 
 #products section p{
@@ -616,6 +641,7 @@ button.primary:focus {
     /* Basic */
         html, body {
             overflow-x: hidden;
+            height: 100%;
         }
 
         body, input, select, textarea {
@@ -641,12 +667,12 @@ button.primary:focus {
         #header{
             display: flex;
             flex-direction: row-reverse;
-            height: 3.5em;
+            /* height: 3.5em; */
         }
 
         #header h1 {
-            height: inherit;
-            line-height: inherit;
+            /* height: inherit;
+            line-height: inherit; */
             margin: 0 auto;
             position:static;
         }
@@ -668,7 +694,7 @@ button.primary:focus {
         }
 
         #header #hamburger{
-            height: 3.5em;
+            height: 40px;
             display: flex;
             align-items: center;
         }
@@ -700,11 +726,11 @@ button.primary:focus {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 6em);
+            height: 100%;
         }
 
         .goto-next {
-            bottom: 8em;
+            bottom: 2em;
         }
 
         #welcome header {
@@ -754,6 +780,10 @@ button.primary:focus {
             padding: 0 1.25em;
             margin: 0.5em 1em 0;
             width: 6em;
+        }
+
+        #contact .formfield input, textarea {
+            width: 60%;
         }
 }
 

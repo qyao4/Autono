@@ -14,6 +14,9 @@ function showOrHideMenu(mode){
 
 
 function load(){
+    document.getElementById("btnSignup").addEventListener("click",
+        () => alert("Sorry, this button is still under construction."));
+        
     document.getElementById("hamburgerMenu").addEventListener("mouseover",
         () => showOrHideMenu('block'));
 

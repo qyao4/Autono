@@ -14,7 +14,7 @@ function showDetail(productNum){
             ]
         ];
     let productImg = document.querySelector("section#productDetail img");
-    let productH5 = document.querySelector("section#productDetail h5");
+    let productH5 = document.querySelector("section#productDetail h3");
     let productP = document.querySelector("section#productDetail p");
     productImg.src = details[productNum][0];
     productImg.alt = details[productNum][1];

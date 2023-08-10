@@ -14,15 +14,16 @@ function showOrHideMenu(mode){
 
 
 function load(){
-    document.getElementById("btnSignup").addEventListener("click",
-        () => alert("Sorry, this button is still under construction."));
+    // document.getElementById("btnSignup").addEventListener("click",
+    //     () => alert("Sorry, this button is still under construction."));
 
-    document.getElementById("hamburgerMenu").addEventListener("mouseover",
-        () => showOrHideMenu('block'));
+    // document.getElementById("hamburgerMenu").addEventListener("mouseover",
+    //     () => showOrHideMenu('block'));
 
-    let ul  = document.querySelector("#header nav ul")
-    ul.addEventListener("mouseleave",
-        () => showOrHideMenu('none'));
+    // let ul  = document.querySelector("#header nav ul")
+    // ul.addEventListener("mouseleave",
+    //     () => showOrHideMenu('none'));
+
 
     document.querySelector("#welcome a").addEventListener('click', function(e) {
         e.preventDefault();
